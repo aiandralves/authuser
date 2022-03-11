@@ -1,0 +1,78 @@
+<div class="sing-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-10">
+                <div class="sing">
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-image"></div>
+                        <div class="col-lg-6">
+
+                            <form class="form" [formGroup]="formGroup" autocomplete="off">
+                                <div class="sing-content">
+                                    <div class="sing-form text-center">
+                                        <h2 class="sing-title">Fazer Cadastro</h2>
+                                        <p class="sing-desc">
+                                            Já possui conta?
+                                            <a [routerLink]="['']">Acesse aqui!</a>
+                                        </p>
+
+                                        <div class="sing-boxes">
+                                            <div class="form-box">
+                                                <i class='bx bx-user'></i>
+                                                <input type="text" class="form-input" formControlName="name"
+                                                    placeholder="Informe seu nome">
+                                            </div>
+                                            <span class="text-alert"
+                                                *ngIf="formGroup.get('name')?.errors && (formGroup.get('name')?.dirty || formGroup.get('name')?.touched)">
+                                                <p>Preencha o campo nome</p>
+                                            </span>
+
+                                            <div class="form-box">
+                                                <i class='bx bx-envelope'></i>
+                                                <input type="email" class="form-input" formControlName="email"
+                                                    placeholder="Informe seu e-mail">
+                                            </div>
+                                            <span class="text-alert"
+                                                *ngIf="formGroup.get('email')?.errors?.required && (formGroup.get('email')?.dirty || formGroup.get('email')?.touched)">
+                                                <p>Preencha o campo E-mail</p>
+                                            </span>
+                                            <span class="text-alert"
+                                                *ngIf="formGroup.get('email')?.errors?.email && (formGroup.get('email')?.dirty || formGroup.get('email')?.touched)">
+                                                <p>E-mail com formato inválido</p>
+                                            </span>
+
+                                            <div class="form-box">
+                                                <i class='bx bx-lock-alt'></i>
+                                                <input type="password" formControlName="password" class="form-input"
+                                                    placeholder="Informe sua senha">
+                                            </div>
+                                            <span class="text-alert"
+                                                *ngIf="formGroup.get('password')?.errors && (formGroup.get('password')?.dirty || formGroup.get('password')?.touched)">
+                                                <p>Preencha o campo senha</p>
+                                            </span>
+
+                                            <div class="form-box">
+                                                <i class='bx bxs-lock-alt'></i>
+                                                <input type="password" formControlName="confirmPassword"
+                                                    class="form-input" placeholder="Confirme sua senha">
+                                            </div>
+                                            <span class="text-alert"
+                                                *ngIf="formGroup.get('confirmPassword')?.errors && (formGroup.get('confirmPassword')?.dirty || formGroup.get('confirmPassword')?.touched)">
+                                                <p>Preencha o campo confirmar senha</p>
+                                            </span>
+
+                                            <button type="submit" (click)="createUser()" class="button">
+                                                Cadastrar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div>
+</div>

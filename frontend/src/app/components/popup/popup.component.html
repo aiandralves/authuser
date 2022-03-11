@@ -1,0 +1,21 @@
+<div class="modal-main">
+    <div class="modal-container">
+        <h2 class="modal-title">Deletar Conta</h2>
+
+        <div class="modal-content">
+            <div class="modal-data">
+                <p>Tem certeza que deseja <span>Deletar</span> sua conta?</p>
+            </div>
+
+            <div class="modal-footer mt-3">
+                <button mat-dialog-close class="button-popup bg-danger">
+                    Cancelar
+                </button>
+
+                <button [mat-dialog-close]="true" (click)="delete()" class="button-popup">
+                    Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

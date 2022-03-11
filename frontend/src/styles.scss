@@ -1,0 +1,189 @@
+/**---------- Sass ----------**/
+@import 'variables';
+
+/**---------- Base ----------**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-size: var(--font-normal);
+    color: var(--color-text);
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+button,
+input,
+textarea {
+    outline: none !important;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**---------- Button ----------**/
+.button {
+    border-radius: 4px;
+    font-size: var(--font-normal);
+    font-weight: 500;
+    margin-top: 1rem;
+    background: var(--color-main);
+    color: #fff;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: var(--color-alt);
+    }
+}
+
+/**---------- Alert ----------**/
+.alert-success {
+    background: var(--color-green) !important;
+    color: #fff !important;
+
+    .mat-simple-snackbar-action {
+        color: #fff !important;
+    }
+}
+
+.alert-error {
+    background: var(--color-danger) !important;
+    color: #fff !important;
+
+    .mat-simple-snackbar-action {
+        color: #fff !important;
+    }
+}
+
+.text-alert {
+    text-align: left !important;
+
+    p {
+        margin-top: -1rem !important;
+        color: var(--color-danger);
+        font-size: var(--font-small);
+    }
+}
+
+/**---------- Sing ----------**/
+.sing-container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: var(--color-body);
+}
+
+.sing {
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+    height: 100%;
+    width: 100%;
+    background: var(--color-white);
+    padding: 2.5rem;
+}
+
+.sing-title {
+    font-size: var(--font-h2);
+    color: var(--color-title);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sing-desc {
+    a {
+        color: var(--color-main);
+    }
+}
+
+.sing-boxes {
+    margin-top: 2rem;
+}
+
+.form-box {
+    display: flex;
+    align-items: center;
+    height: 3.125rem;
+    width: 100%;
+    margin: 0.6rem 0;
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    .form-input {
+        height: 100%;
+        width: 100%;
+        padding: 0 2rem;
+        background: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        font-size: var(--font-normal);
+        transition: all 0.3s ease;
+
+        &:focus {
+            border-color: var(--color-main);
+        }
+    }
+
+    i {
+        position: absolute;
+        color: var(--color-main);
+        font-size: 1.2rem;
+    }
+}
+
+.bg-image {
+    background: url('./assets/img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/**-------- ScrollBar ---------**/
+::-webkit-scrollbar {
+    width: 0.4rem;
+    background-color: hsl(250, 12%, 90%);
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(250, 12%, 80%);
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(250, 8%, 65%);
+}

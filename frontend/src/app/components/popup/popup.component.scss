@@ -1,0 +1,56 @@
+/***-------- Sass --------***/
+@import 'variables';
+
+/**--------- Popup ---------**/
+.modal-main {
+    position: fixed;
+    background: #000000bf;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal-container {
+    background: var(--color-body);
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+}
+
+.modal-title {
+    font-size: var(--font-h3);
+    font-weight: 600;
+    padding: 1.25rem;
+}
+
+.modal-content {
+    background: var(--color-body);
+    border: none !important;
+}
+
+.modal-data {
+    padding: 1rem 1.5rem;
+
+    p {
+        font-size: var(--font-h3);
+        font-weight: 500;
+    }
+
+    span {
+        color: var(--color-danger);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.button-popup {
+    padding: 0.7rem 1.3rem;
+    color: #fff;
+    font-size: var(--font-small);
+    background: var(--color-main);
+    border-radius: 4px;
+}

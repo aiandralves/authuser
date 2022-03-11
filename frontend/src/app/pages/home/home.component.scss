@@ -1,0 +1,42 @@
+/**---------- Sass ----------**/
+@import 'variables';
+
+/**---------- Home ----------**/
+.home-item {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.home-data {
+    img {
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        margin-bottom: 1rem;
+        font-size: var(--font-h2);
+        font-weight: 600;
+        color: var(--color-main);
+    }
+
+    .home-desc {
+        margin-bottom: 2rem;
+    }
+
+    .btn-home {
+        width: 30% !important;
+    }
+}
+
+.home-delete {
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: var(--color-text);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--color-main);
+    }
+}
