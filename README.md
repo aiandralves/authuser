@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 3. Execute as Migrations: `npm run typeorm migration:run` ou `yarn typeorm migration:run`
 
-4. Execute a API: `npm start` ou `yarn dev`
+4. Execute a API: `npm run dev` ou `yarn dev`
 
 Por fim, a aplicação estará disponível em `http://localhost:3333`
 
